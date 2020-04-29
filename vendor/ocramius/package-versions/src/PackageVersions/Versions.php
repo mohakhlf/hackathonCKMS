@@ -62,7 +62,7 @@ final class Versions
   'symfony/options-resolver' => 'v4.3.3@40762ead607c8f792ee4516881369ffa553fee6f',
   'symfony/process' => 'v4.3.3@856d35814cf287480465bb7a6c413bb7f5f5e69c',
   'symfony/yaml' => 'v4.3.3@34d29c2acd1ad65688f58452fd48a46bd996d5a6',
-  'aurel/simple-mvc' => 'No version set (parsed as 1.0.0)@',
+  'aurel/simple-mvc' => 'dev-cecile@3a0f6a064754a86b0e6bb6abd366710c20e8ddbd',
 );
 
     private function __construct()

@@ -19,9 +19,13 @@ windyInit(options, windyAPI => {
     const { map } = windyAPI;
     // .map est une instance de Leaflet map
 
+    // L.popup()
+    //     .setLatLng([50.4, 14.3])
+    //     .setContent('Hello World')
+    //     .openOn(map);
     L.popup()
-        .setLatLng([50.4, 14.3])
-        .setContent('Hello World')
+        .setLatLng([ 48.858370, 2.294481])
+        .setContent('Voyageons à Paris')
         .openOn(map);
 });
 console.log('test');
