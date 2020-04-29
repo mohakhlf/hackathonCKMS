@@ -6,7 +6,7 @@
  * (c) Nils Adermann <naderman@naderman.de>
  *     Jordi Boggiano <j.boggiano@seld.be>
  *
- * For the full copyright and license information, please view the LICENSE
+ * For the full copyright and license information, please viewManager the LICENSE
  * file that was distributed with this source code.
  */
 
@@ -206,7 +206,7 @@ class Filesystem
                 usleep(350000);
                 $unlinked = @$this->unlinkImplementation($path);
             }
-            
+
             if (!$unlinked) {
                 $error = error_get_last();
                 $message = 'Could not delete '.$path.': ' . @$error['message'];
@@ -237,7 +237,7 @@ class Filesystem
                 usleep(350000);
                 $deleted = @rmdir($path);
             }
-            
+
             if (!$deleted) {
                 $error = error_get_last();
                 $message = 'Could not delete '.$path.': ' . @$error['message'];

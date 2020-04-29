@@ -5,7 +5,7 @@
  *
  * (c) Composer <https://github.com/composer>
  *
- * For the full copyright and license information, please view
+ * For the full copyright and license information, please viewManager
  * the LICENSE file that was distributed with this source code.
  */
 

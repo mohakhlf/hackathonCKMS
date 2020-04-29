@@ -1,5 +1,5 @@
 <?php /* List file names & line numbers for all stack frames;
-         clicking these links/buttons will display the code view
+         clicking these links/buttons will display the code viewManager
          for that particular frame */ ?>
 <?php foreach ($frames as $i => $frame): ?>
   <div class="frame <?php echo ($i == 0 ? 'active' : '') ?> <?php echo ($frame->isApplication() ? 'frame-application' : '') ?>" id="frame-line-<?php echo $i ?>">

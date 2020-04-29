@@ -6,7 +6,7 @@
  * (c) Nils Adermann <naderman@naderman.de>
  *     Jordi Boggiano <j.boggiano@seld.be>
  *
- * For the full copyright and license information, please view the LICENSE
+ * For the full copyright and license information, please viewManager the LICENSE
  * file that was distributed with this source code.
  */
 
@@ -246,7 +246,7 @@ EOT
             return $exitCode;
         }
 
-        // show tree view if requested
+        // show tree viewManager if requested
         if ($input->getOption('tree')) {
             $rootRequires = $this->getRootRequires();
             $packages = $installedRepo->getPackages();

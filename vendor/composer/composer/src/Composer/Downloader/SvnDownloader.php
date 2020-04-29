@@ -6,7 +6,7 @@
  * (c) Nils Adermann <naderman@naderman.de>
  *     Jordi Boggiano <j.boggiano@seld.be>
  *
- * For the full copyright and license information, please view the LICENSE
+ * For the full copyright and license information, please viewManager the LICENSE
  * file that was distributed with this source code.
  */
 
@@ -133,7 +133,7 @@ class SvnDownloader extends VcsDownloader
             $remaingChanges = $countChanges - 10;
             $this->io->writeError(
                 sprintf(
-                    '    <info>'.$remaingChanges.' more file%s modified, choose "v" to view the full list</info>',
+                    '    <info>'.$remaingChanges.' more file%s modified, choose "v" to viewManager the full list</info>',
                     $remaingChanges === 1 ? '' : 's'
                 )
             );
@@ -157,7 +157,7 @@ class SvnDownloader extends VcsDownloader
                     $this->io->writeError(array(
                         '    y - discard changes and apply the '.($update ? 'update' : 'uninstall'),
                         '    n - abort the '.($update ? 'update' : 'uninstall').' and let you manually clean things up',
-                        '    v - view modified files',
+                        '    v - viewManager modified files',
                         '    ? - print help',
                     ));
                     break;

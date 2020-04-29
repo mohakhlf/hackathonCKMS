@@ -6,7 +6,7 @@
  * (c) Nils Adermann <naderman@naderman.de>
  *     Jordi Boggiano <j.boggiano@seld.be>
  *
- * For the full copyright and license information, please view the LICENSE
+ * For the full copyright and license information, please viewManager the LICENSE
  * file that was distributed with this source code.
  */
 
@@ -39,7 +39,7 @@ class ExecCommand extends BaseCommand
             ->setHelp(
                 <<<EOT
 Executes a vendored binary/script.
-                
+
 Read more at https://getcomposer.org/doc/03-cli.md#exec
 EOT
             )
