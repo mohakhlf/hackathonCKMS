@@ -35,8 +35,8 @@ class HomeController extends AbstractController
             $content = $response->toArray();
             $content1 = $object->toArray();
             // convert the response (here in JSON) to an PHP array
-            var_dump($content);
-            var_dump($content1);
+//            var_dump($content);
+//            var_dump($content1);
         }
 
         return $this->twig->render('Home/index.html.twig', ["collection"=>$content, "collection1"=>$content1]);
