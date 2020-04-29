@@ -69,15 +69,16 @@
 
 
 
-
-
-
-
-
-
-body {
-    background: #2e62a8;
+.as_home {
+    justify-content: center;
 }
+
+
+#windy {
+    border: 5px solid black;
+    justify-content: center;
+}
+
 
 
 
