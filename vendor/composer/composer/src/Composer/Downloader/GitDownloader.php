@@ -6,7 +6,7 @@
  * (c) Nils Adermann <naderman@naderman.de>
  *     Jordi Boggiano <j.boggiano@seld.be>
  *
- * For the full copyright and license information, please view the LICENSE
+ * For the full copyright and license information, please viewManager the LICENSE
  * file that was distributed with this source code.
  */
 
@@ -264,7 +264,7 @@ class GitDownloader extends VcsDownloader implements DvcsDownloaderInterface
         $this->io->writeError('    <error>The package has modified files:</error>');
         $this->io->writeError(array_slice($changes, 0, 10));
         if (count($changes) > 10) {
-            $this->io->writeError('    <info>' . (count($changes) - 10) . ' more files modified, choose "v" to view the full list</info>');
+            $this->io->writeError('    <info>' . (count($changes) - 10) . ' more files modified, choose "v" to viewManager the full list</info>');
         }
 
         while (true) {
@@ -298,8 +298,8 @@ class GitDownloader extends VcsDownloader implements DvcsDownloaderInterface
                     $this->io->writeError(array(
                         '    y - discard changes and apply the '.($update ? 'update' : 'uninstall'),
                         '    n - abort the '.($update ? 'update' : 'uninstall').' and let you manually clean things up',
-                        '    v - view modified files',
-                        '    d - view local modifications (diff)',
+                        '    v - viewManager modified files',
+                        '    d - viewManager local modifications (diff)',
                     ));
                     if ($update) {
                         $this->io->writeError('    s - stash changes and try to reapply them after the update');
@@ -469,7 +469,7 @@ class GitDownloader extends VcsDownloader implements DvcsDownloaderInterface
     {
         $path = $this->normalizePath($path);
         if (0 !== $this->process->execute('git diff HEAD', $output, $path)) {
-            throw new \RuntimeException("Could not view diff\n\n:".$this->process->getErrorOutput());
+            throw new \RuntimeException("Could not viewManager diff\n\n:".$this->process->getErrorOutput());
         }
 
         $this->io->writeError($output);

@@ -5,7 +5,7 @@
  *
  * (c) Jonathan A. Schweder <jonathanschweder@gmail.com>
  *
- * For the full copyright and license information, please view the LICENSE
+ * For the full copyright and license information, please viewManager the LICENSE
  * file that was distributed with this source code.
  */
 

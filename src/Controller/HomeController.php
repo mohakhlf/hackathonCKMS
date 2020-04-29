@@ -54,4 +54,24 @@ class HomeController extends AbstractController
 
         return $this->twig->render('Home/index.html.twig', ["collection"=>$content, "collection1"=>$content1]);
     }
+
+    /**
+     * @param $code
+     * @return string
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
+     */
+    public function View($code)
+    {
+        $url = "https://collectionapi.metmuseum.org/public/collection/v1/objects/" . $code;
+        $data = file_get_contents($url);
+        $decode = json_decode($data);
+        $produit = [
+            'title' => $decode->title,
+            'image' => $decode->primaryImage,
+            'bomArtiste' => $decode -> artistDisplayName
+        ];
+        return $this->twig->render('Home/View.html.twig', ["produit"=>$produit]);
+    }
 }
