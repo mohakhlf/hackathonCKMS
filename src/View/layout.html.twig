@@ -3,22 +3,30 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
     <script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
+    <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/kevin.css">
+    <link rel="stylesheet" href="/assets/css/samir.css">
+    <link rel="stylesheet" href="/assets/css/cecile.css">
     {% block stylesheet %}{% endblock %}
     <link rel="icon" href="/assets/images/favicon.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        #windy {
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
 </head>
 <body>
 
 {% block content %}{% endblock %}
-<script src="/assets/Js/script.js"></script>
+
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
@@ -28,8 +36,132 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+<script>
+    const options = {
+        // Required: API key
+        key: 'h0NUA56jVxXfBxUIyfpFAWIidYAf52Tx', // REPLACE WITH YOUR KEY !!!
+
+        // Put additional console output
+        verbose: true,
+
+        // Optional: Initial state of the map
+        lat: 50.4,
+        lon: 14.3,
+        zoom: -1,
+    };
+
+    // Initialize Windy API
+    windyInit(options, windyAPI => {
+        // windyAPI is ready, and contain 'map', 'store',
+        // 'picker' and other usefull stuff
+
+        const { map } = windyAPI;
+        // .map is instance of Leaflet map
+
+        // L.popup()
+        //     .setLatLng([50.4, 14.3])
+        //     .setContent('Hello World')
+        //     .openOn(map);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([45.64, -73.55]).addTo(map)
+            .bindPopup('Code postal de Montreal.<br>')
+            .openPopup();
+        //####################
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.google.com/search?q=bootstrap&oq=&aqs=chrome.1.35i39l8.726627j0j7&sourceid=chrome&ie=UTF-8">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([48.8, 2.3]).addTo(map)
+            .bindPopup('Code postal de Paris.<br>')
+            .openPopup();
+        //######################
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.google.com/search?q=bootstrap&oq=&aqs=chrome.1.35i39l8.726627j0j7&sourceid=chrome&ie=UTF-8">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([51.50,   -0.12]).addTo(map)
+            .bindPopup('Code postal de Londres.<br>')
+            .openPopup();
+        //#######################"""
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.google.com/search?q=bootstrap&oq=&aqs=chrome.1.35i39l8.726627j0j7&sourceid=chrome&ie=UTF-8">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([41.15,  -8.61]).addTo(map)
+            .bindPopup('Code postal de Porto.<br>')
+            .openPopup();
+        //#######################"""
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.google.com/search?q=bootstrap&oq=&aqs=chrome.1.35i39l8.726627j0j7&sourceid=chrome&ie=UTF-8">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([37.61, 139.91]).addTo(map)
+            .bindPopup('Code postal de Tokyo.<br>')
+            .openPopup();
+        //#######################"""
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.google.com/search?q=bootstrap&oq=&aqs=chrome.1.35i39l8.726627j0j7&sourceid=chrome&ie=UTF-8">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([-33.469120,-70.641997]).addTo(map)
+            .bindPopup('Code postal de Sao Paulo.<br>')
+            .openPopup();
+        //#######################"""
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.google.com/search?q=bootstrap&oq=&aqs=chrome.1.35i39l8.726627j0j7&sourceid=chrome&ie=UTF-8">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([41.90, 12.49]).addTo(map)
+            .bindPopup('Code postal de Rome.<br>')
+            .openPopup();
+        //#######################"""
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.google.com/search?q=bootstrap&oq=&aqs=chrome.1.35i39l8.726627j0j7&sourceid=chrome&ie=UTF-8">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([55.755826,37.6173]).addTo(map)
+            .bindPopup('Code postal de Moscow.<br>')
+            .openPopup();
+        //#######################"""
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.google.com/search?q=bootstrap&oq=&aqs=chrome.1.35i39l8.726627j0j7&sourceid=chrome&ie=UTF-8">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([41.00, 28.97]).addTo(map)
+            .bindPopup('Code postal de Istanbul.<br>')
+            .openPopup();
+        //#######################"""
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.google.com/search?q=bootstrap&oq=&aqs=chrome.1.35i39l8.726627j0j7&sourceid=chrome&ie=UTF-8">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([-6.84,  -4.18]).addTo(map)
+            .bindPopup('Code postal de Londres.<br>')
+            .openPopup();
+        //#######################"""
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.google.com/search?q=bootstrap&oq=&aqs=chrome.1.35i39l8.726627j0j7&sourceid=chrome&ie=UTF-8">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([33.9715904,   -6.8498129]).addTo(map)
+            .bindPopup('Code postal de Rabat.<br>')
+            .openPopup();
+        //#######################"""
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.google.com/search?q=bootstrap&oq=&aqs=chrome.1.35i39l8.726627j0j7&sourceid=chrome&ie=UTF-8">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([ 40.4167754, -3.7037902]).addTo(map)
+            .bindPopup('Code postal de Madrid.<br>')
+            .openPopup();
+        //#######################"""
+    });
+</script>
 </body>
 </html>
-
 
 
