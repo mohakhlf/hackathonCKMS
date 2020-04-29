@@ -1,23 +1,33 @@
 {% extends 'layout.html.twig' %}
-
+{% block title %} De mon Canapé aux reste du monde {% endblock %}
 {% block content %}
-    <h2>Partons en voyage dans notre canapé</h2>
-    <div id="windy"></div>
-<div class="container">
-    <h3>Paris a beaucoup été "Muse" de nombreux artises.</h3>
-    <div class="row" >
-        <a name="windy-webcam-timelapse-player" data-id="1549489174" data-play="day" href="https://windy.com/webcams/1549489174" target="_blank">Paris: Arc de Triomphe - Eiffel Tower</a><script async type="text/javascript" src="https://webcams.windy.com/webcams/public/embed/script/player.js"></script>
-        <p>Tour Eiffel, la vue de la "Muse"</p>
-    </div>
-    <div class="row">
-        <div class="col-6"> <p>Tour Eiffel, de Robert Delaunay en 1926</p>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Robert_Delaunay%2C_1926%2C_Tour_Eiffel%2C_oil_on_canvas%2C_169_%C3%97_86_cm%2C_Mus%C3%A9e_d%27Art_Moderne_de_la_ville_de_Paris.jpg/260px-Robert_Delaunay%2C_1926%2C_Tour_Eiffel%2C_oil_on_canvas%2C_169_%C3%97_86_cm%2C_Mus%C3%A9e_d%27Art_Moderne_de_la_ville_de_Paris.jpg">
+    <div class="container-fluid as_home">
+        <div id="windy"></div>
+        <div class="container">
+            <h3>Paris a beaucoup été "Muse" de nombreux artises.</h3>
+            <div class="row" >
+                <a name="windy-webcam-timelapse-player" data-id="1549489174" data-play="day" href="https://windy.com/webcams/1549489174" target="_blank">Paris: Arc de Triomphe - Eiffel Tower</a><script async type="text/javascript" src="https://webcams.windy.com/webcams/public/embed/script/player.js"></script>
+                <p>Tour Eiffel, la vue de la "Muse"</p>
+            </div>
+            <div class="row">
+                <div class="col-6"> <p>Tour Eiffel, de Robert Delaunay en 1926</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Robert_Delaunay%2C_1926%2C_Tour_Eiffel%2C_oil_on_canvas%2C_169_%C3%97_86_cm%2C_Mus%C3%A9e_d%27Art_Moderne_de_la_ville_de_Paris.jpg/260px-Robert_Delaunay%2C_1926%2C_Tour_Eiffel%2C_oil_on_canvas%2C_169_%C3%97_86_cm%2C_Mus%C3%A9e_d%27Art_Moderne_de_la_ville_de_Paris.jpg">
+                </div>
+               <div class="col-6"><p>"L'homme de la Tour Eiffel", un film de Burgess Meredith.</p>
+                   <img src="http://ekladata.com/jkHM5fMFvl3VzrgQcX3GZhT_YUQ@250x329.jpg">
+               </div>
+            </div>
         </div>
-       <div class="col-6"><p>"L'homme de la Tour Eiffel", un film de Burgess Meredith.</p>
-           <img src="http://ekladata.com/jkHM5fMFvl3VzrgQcX3GZhT_YUQ@250x329.jpg">
-       </div>
     </div>
-</div>
-
+{#    {{ dump(collection) }}#}
+{#    <h1>{{ object.department }}</h1>#}
+{#    <ul>#}
+{#        <li>Role : {{ object.constituents.0.role }}</li>#}
+{#        <li>Nom : {{ object.constituents.0.name }}</li>#}
+{#    </ul>#}
+{#    <img src="{{ object.primaryImage }}" />#}
+{#    {% for webcam in webcams %}#}
+{#        {{ webcam.title }}<br/>#}
+{#    {% endfor %}#}
 
 {% endblock %}

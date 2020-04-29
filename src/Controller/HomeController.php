@@ -8,6 +8,14 @@
 
 namespace App\Controller;
 use Symfony\Component\HttpClient\HttpClient;
+use Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface;
+use Symfony\Contracts\HttpClient\Exception\DecodingExceptionInterface;
+use Symfony\Contracts\HttpClient\Exception\RedirectionExceptionInterface;
+use Symfony\Contracts\HttpClient\Exception\ServerExceptionInterface;
+use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
 
 class HomeController extends AbstractController
 {
@@ -16,9 +24,14 @@ class HomeController extends AbstractController
      * Display home page
      *
      * @return string
-     * @throws \Twig\Error\LoaderError
-     * @throws \Twig\Error\RuntimeError
-     * @throws \Twig\Error\SyntaxError
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
+     * @throws ClientExceptionInterface
+     * @throws DecodingExceptionInterface
+     * @throws RedirectionExceptionInterface
+     * @throws ServerExceptionInterface
+     * @throws TransportExceptionInterface
      */
     public function index()
     {
@@ -36,4 +49,26 @@ class HomeController extends AbstractController
 
         return $this->twig->render('Home/index.html.twig', ["webcams" => $content["result"]["webcams"]]);
     }
+
+
+    /**
+     * @param $code
+     * @return string
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
+     */
+    public function View($code)
+    {
+        $url = "https://collectionapi.metmuseum.org/public/collection/v1/objects/" . $code;
+        $data = file_get_contents($url);
+        $decode = json_decode($data);
+        $produit = [
+            'title' => $decode->title,
+            'image' => $decode->primaryImage,
+            'bomArtiste' => $decode -> artistDisplayName
+        ];
+        return $this->twig->render('Home/View.html.twig', ["produit"=>$produit]);
+    }
 }
+

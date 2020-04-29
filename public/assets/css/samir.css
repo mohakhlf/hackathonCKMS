@@ -1,0 +1,9 @@
+.as_home {
+    border: 5px solid darkred;
+    padding: 0 10%;
+}
+#windy {
+    border: 5px solid black;
+    margin: 12% 0 0 0;
+    justify-content: center;
+}
