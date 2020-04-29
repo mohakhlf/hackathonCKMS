@@ -7,6 +7,7 @@
  */
 
 namespace App\Controller;
+use Symfony\Component\HttpClient\HttpClient;
 
 class HomeController extends AbstractController
 {
@@ -21,6 +22,23 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        return $this->twig->render('Home/index.html.twig');
+        $client = HttpClient::create();
+        $response = $client->request("GET", "https://collectionapi.metmuseum.org/public/collection/v1/search?medium=Paintings&hasImages=true&q=sunset");
+        $object = $client->request("GET", "https://collectionapi.metmuseum.org/public/collection/v1/objects/53660");
+
+        $statusCode = $response->getStatusCode(); // get Response status code 200
+
+        if ($statusCode === 200) {
+            $content = $response->getContent();
+            // get the response in JSON format
+
+            $content = $response->toArray();
+            $content1 = $object->toArray();
+            // convert the response (here in JSON) to an PHP array
+            var_dump($content);
+            var_dump($content1);
+        }
+
+        return $this->twig->render('Home/index.html.twig', ["collection"=>$content, "collection1"=>$content1]);
     }
 }
