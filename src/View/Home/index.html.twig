@@ -35,20 +35,47 @@
         <h2>Parcourez le Monde pour découvrir des oeuvres</h2>
         <div id="windy"></div>
         <div class="container">
+        </div>
     </div>
 
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2">
+            <div class="col mb-4">
+                <div class="card as_card_index">
+                    <img src="{{ collection1.primaryImage }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ collection1.title }}</h4>
+                        <p class="card-text">{{ collection4.artistDisplayName }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card as_card_index">
+                    <img src="{{ collection1.primaryImage }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ collection1.title }}</h4>
+                        <p class="card-text">{{ collection4.artistDisplayName }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card as_card_index">
+                    <img src="{{ collection1.primaryImage }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ collection1.title }}</h4>
+                        <p class="card-text">{{ collection4.artistDisplayName }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card as_card_index">
+                    <img src="{{ collection1.primaryImage }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ collection1.title }}</h4>
+                        <p class="card-text">{{ collection4.artistDisplayName }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-
-{#    {{ dump(collection) }}#}
-{#    <h1>{{ object.department }}</h1>#}
-{#    <ul>#}
-{#        <li>Role : {{ object.constituents.0.role }}</li>#}
-{#        <li>Nom : {{ object.constituents.0.name }}</li>#}
-{#    </ul>#}
-{#    <img src="{{ object.primaryImage }}" />#}
-{#    {% for webcam in webcams %}#}
-{#        {{ webcam.title }}<br/>#}
-{#    {% endfor %}#}
-
 {% endblock %}
