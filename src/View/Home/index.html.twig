@@ -40,47 +40,47 @@
     </div>
 
     <div class="container">
+        <div class="row">
         <div class="row row-cols-1 row-cols-md-2">
             <div class="col mb-4">
                 <div class="card as_card_index">
                     <img src="{{ collection1.primaryImage }}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h4 class="card-title">{{ collection1.title }}</h4>
-                        <p class="card-text">{{ collection4.artistDisplayName }}</p>
+                        <h4 class="card-title">L'oevure : {{ collection1.title }}</h4>
+                        <p class="card-text">Réalisée par : {{ collection1.artistDisplayName ?? 'on a pas d\'auteur' }}</p>
                     </div>
                 </div>
             </div>
             <div class="col mb-4">
                 <div class="card as_card_index">
-                    <img src="{{ collection1.primaryImage }}" class="card-img-top" alt="...">
+                    <img src="{{ collection2.primaryImage }}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h4 class="card-title">{{ collection1.title }}</h4>
-                        <p class="card-text">{{ collection4.artistDisplayName }}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-4">
-                <div class="card as_card_index">
-                    <img src="{{ collection1.primaryImage }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h4 class="card-title">{{ collection1.title }}</h4>
-                        <p class="card-text">{{ collection4.artistDisplayName }}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-4">
-                <div class="card as_card_index">
-                    <img src="{{ collection1.primaryImage }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h4 class="card-title">{{ collection1.title }}</h4>
-                        <p class="card-text">{{ collection4.artistDisplayName }}</p>
+                        <h4 class="card-title">L'oevure : {{ collection2.title }}</h4>
+                        <p class="card-text">{{ collection2.artistDisplayName ?? 'on a pas d\'auteur' }}</p>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="row row-cols-1 row-cols-md-2">
+            <div class="col mb-4">
+                <div class="card as_card_index">
+                    <img src="{{ collection3.primaryImage }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">L'oevure : {{ collection3.title }}</h4>
+                        <p class="card-text">Réalisée par : {{ collection3.artistDisplayName ?? 'on a pas d\'auteur' }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card as_card_index">
+                    <img src="{{ collection4.primaryImage }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">L'oevure : {{ collection4.title }}</h4>
+                        <p class="card-text">Réalisée par : {{ collection4.artistDisplayName ?? 'on a pas d\'auteur' }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
     </div>
-    <ul>
-        <li>Role : {{ object.constituents.0.role }}</li>
-        <li>Nom : {{ object.constituents.0.name }}</li>
-    </ul>
 {% endblock %}
