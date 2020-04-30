@@ -3,7 +3,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-    background-color: rgba(245, 224, 95, 0.51);
+    background-color: rgba(97, 93, 88, 0.55);
     background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
 }
 
@@ -26,6 +26,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
+.as_video a {}
 .as_carte1 img,
 .as_carte2 img,
 .as_carte3 img,
@@ -48,7 +49,6 @@ body {
     display: flex;
     flex-direction: column-reverse;
 }
-
 .as_div_carte {
     margin: 6% 0 15% 0;
 }
