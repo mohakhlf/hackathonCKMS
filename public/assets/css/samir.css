@@ -1,3 +1,6 @@
+a, a:hover {
+    text-decoration: none;
+}
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Lobster', cursive;
 }
@@ -55,3 +58,12 @@ body {
 .as_div_carte h2 {
     margin-bottom: -6%;
 }
+.card-body {
+    background-color: rgba(137, 137, 137, 0.51);
+    border-radius: 0 0 30px 30px;
+
+}
+.as_card_index {
+    border-radius: 30px;
+}
+
