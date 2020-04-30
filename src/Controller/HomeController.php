@@ -54,10 +54,10 @@ class HomeController extends AbstractController
     {
         $client = HttpClient::create();
         $response = $client->request("GET", "https://collectionapi.metmuseum.org/public/collection/v1/search?medium=Paintings&hasImages=true&q=sunset");
-        $object1 = $client->request("GET", "https://collectionapi.metmuseum.org/public/collection/v1/objects/437980");
-        $object2 = $client->request("GET", "https://collectionapi.metmuseum.org/public/collection/v1/objects/437980");
-        $object3 = $client->request("GET", "https://collectionapi.metmuseum.org/public/collection/v1/objects/437980");
-        $object4 = $client->request("GET", "https://collectionapi.metmuseum.org/public/collection/v1/objects/437980");
+        $object1 = $client->request("GET", "https://collectionapi.metmuseum.org/public/collection/v1/objects/436631");
+        $object2 = $client->request("GET", "https://collectionapi.metmuseum.org/public/collection/v1/objects/73159");
+        $object3 = $client->request("GET", "https://collectionapi.metmuseum.org/public/collection/v1/objects/49173");
+        $object4 = $client->request("GET", "https://collectionapi.metmuseum.org/public/collection/v1/objects/436062");
 
         $statusCode = $response->getStatusCode(); // get Response status code 200
         if ($statusCode === 200) {
@@ -69,13 +69,13 @@ class HomeController extends AbstractController
             $content2 = $object2->toArray();
             $content3 = $object3->toArray();
             $content4 = $object4->toArray();
-            var_dump($content1);
-            var_dump($content2);
-            var_dump($content3);
-            var_dump($content4);
-            var_dump($content["objectIDs"]);
+//            var_dump($content1);
+//            var_dump($content2);
+//            var_dump($content3);
+//            var_dump($content4);
+//            var_dump($content["objectIDs"]);
         }
-        return $this->twig->render('Home/index.html.twig', ["webcams" => $content["result"]["webcams"], "content" => $content, "collection1"=>$content1, "collection2"=>$content2, "collection3"=>$content3, "collection4"=>$content4]);
+        return $this->twig->render('Home/index.html.twig', ["content" => $content, "collection1"=>$content1, "collection2"=>$content2, "collection3"=>$content3, "collection4"=>$content4]);
     }
 }
 
