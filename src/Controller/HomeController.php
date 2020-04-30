@@ -67,7 +67,7 @@ class HomeController extends AbstractController
         if ($statusCode === 200) {
             $content = $response->getContent();
             // get the response in JSON format
-        
+
             $content = $response->toArray();
             $content1 = $object1->toArray();
             $content2 = $object2->toArray();
@@ -82,4 +82,3 @@ class HomeController extends AbstractController
         return $this->twig->render('Home/index.html.twig', ["content" => $content, "collection1"=>$content1, "collection2"=>$content2, "collection3"=>$content3, "collection4"=>$content4]);
     }
 }
-
