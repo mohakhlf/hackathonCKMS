@@ -6,22 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
     <script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
+    <script src="https://kit.fontawesome.com/0f77bf6f9a.js" crossorigin="anonymous"></script>
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/kevin.css">
-    <link rel="stylesheet" href="/assets/css/samir.css">
-    <link rel="stylesheet" href="/assets/css/cecile.css">
-    {% block stylesheet %}{% endblock %}
+    {% block stylesheet %}
     <link rel="icon" href="/assets/images/favicon.png">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <style>
-        #windy {
-            width: 100%;
-            height: 80vh;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap&subset=latin-ext" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/kevin.css">
+    <link rel="stylesheet" href="/assets/css/cecile.css">
+    <link rel="stylesheet" href="/assets/css/samir.css">
+    {% endblock %}
 </head>
 <body>
 
