@@ -32,9 +32,13 @@ class HomeController extends AbstractController
         $data = file_get_contents($url);
         $decode = json_decode($data);
         $produit = [
-            'title' => $decode->title,
             'image' => $decode->primaryImage,
-            'bomArtiste' => $decode -> artistDisplayName
+            'imageSmall' => $decode->primaryImageSmall,
+            'title' => $decode->title,
+            'bomArtiste' => $decode -> artistDisplayName,
+            'artisteBio' => $decode -> artistDisplayBio,
+            'objetBio' => $decode -> objectBeginDate,
+            'repo' => $decode->repository
         ];
         return $this->twig->render('Home/View.html.twig', ["produit"=>$produit]);
     }

@@ -1,22 +1,22 @@
 {% extends 'layout.html.twig' %}
 {% block content %}
-    <div class="container-fluid">
-    <div class="card text-center">
-        <img src="{{ produit.image }}" width="250" height="450" alt="">
-        <div class="card-body">
-            <h5 class="card-title">Titre de l'Oeuvre: {{ produit.title }}</h5>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">{{ produit.title }}</h1>
+            <p class="lead">Voilà l'oeuvre réalisée par {{ produit.bomArtiste }}.<br> Petite biographie: {{ produit.artisteBio }}, il réalisa {{ produit.title }} en {{ produit.objetBio }}.<br> Entreposée au
+                {{ produit.repo }}.</p>
+        </div>
+    </div>
+    <div class="container">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{ produit.image }}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ produit.imageSmall }}" class="d-block w-100" alt="...">
+            </div>
         </div>
     </div>
     </div>
-
-
-{#    #}
-{#    <div class="container">#}
-{#        <div class="col">#}
-{#    <h1 class="title">Description de l'Oeuvre</h1>#}
-{#<a href="/produit/55555"></a>#}
-{#{{ produit.title }}#}
-{#<img src="{{ produit.image }}" width="250" height="450" alt="">#}
-{#        </div>#}
-{#    </div>#}
 {% endblock %}
