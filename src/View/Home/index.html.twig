@@ -1,24 +1,44 @@
 {% extends 'layout.html.twig' %}
 {% block title %} De mon Canapé aux reste du monde {% endblock %}
 {% block content %}
-    <div class="container-fluid as_home">
-        <div id="windy"></div>
-        <div class="container">
-            <h3>Paris a beaucoup été "Muse" de nombreux artises.</h3>
-            <div class="row" >
+<div class="container-fluid as_home">
+    <div class="container">
+        <h3>Paris a beaucoup été "Muse" de nombreux artises.</h3>
+        <div class="row as_home_row"" >
+            <div class="col-md-1"></div>
+            <div class="col-md-10 as_video">
+                <h5>Tour Eiffel, la vue de la "Muse</h5>
                 <a name="windy-webcam-timelapse-player" data-id="1549489174" data-play="day" href="https://windy.com/webcams/1549489174" target="_blank">Paris: Arc de Triomphe - Eiffel Tower</a><script async type="text/javascript" src="https://webcams.windy.com/webcams/public/embed/script/player.js"></script>
-                <p>Tour Eiffel, la vue de la "Muse"</p>
             </div>
-            <div class="row">
-                <div class="col-6"> <p>Tour Eiffel, de Robert Delaunay en 1926</p>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Robert_Delaunay%2C_1926%2C_Tour_Eiffel%2C_oil_on_canvas%2C_169_%C3%97_86_cm%2C_Mus%C3%A9e_d%27Art_Moderne_de_la_ville_de_Paris.jpg/260px-Robert_Delaunay%2C_1926%2C_Tour_Eiffel%2C_oil_on_canvas%2C_169_%C3%97_86_cm%2C_Mus%C3%A9e_d%27Art_Moderne_de_la_ville_de_Paris.jpg">
-                </div>
-               <div class="col-6"><p>"L'homme de la Tour Eiffel", un film de Burgess Meredith.</p>
-                   <img src="http://ekladata.com/jkHM5fMFvl3VzrgQcX3GZhT_YUQ@250x329.jpg">
-               </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-3 as_carte1">
+                <h5>Tour Eiffel, de Robert Delaunay en 1926</h5>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Robert_Delaunay%2C_1926%2C_Tour_Eiffel%2C_oil_on_canvas%2C_169_%C3%97_86_cm%2C_Mus%C3%A9e_d%27Art_Moderne_de_la_ville_de_Paris.jpg/260px-Robert_Delaunay%2C_1926%2C_Tour_Eiffel%2C_oil_on_canvas%2C_169_%C3%97_86_cm%2C_Mus%C3%A9e_d%27Art_Moderne_de_la_ville_de_Paris.jpg">
+            </div>
+            <div class="col-md-3 as_carte2">
+                <h5>L'homme de la Tour Eiffel", un film de Burgess Meredith.</h5>
+                <img src="http://ekladata.com/jkHM5fMFvl3VzrgQcX3GZhT_YUQ@250x329.jpg">
+            </div>
+            <div class="col-md-3 as_carte3">
+                <h5>Tour Eiffel, de Robert Delaunay en 1926</h5>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Robert_Delaunay%2C_1926%2C_Tour_Eiffel%2C_oil_on_canvas%2C_169_%C3%97_86_cm%2C_Mus%C3%A9e_d%27Art_Moderne_de_la_ville_de_Paris.jpg/260px-Robert_Delaunay%2C_1926%2C_Tour_Eiffel%2C_oil_on_canvas%2C_169_%C3%97_86_cm%2C_Mus%C3%A9e_d%27Art_Moderne_de_la_ville_de_Paris.jpg">
+            </div>
+            <div class="col-md-3 as_carte4">
+                <h5>L'homme de la Tour Eiffel", un film de Burgess Meredith.</h5>
+                <img src="http://ekladata.com/jkHM5fMFvl3VzrgQcX3GZhT_YUQ@250x329.jpg">
             </div>
         </div>
+
     </div>
+    <div class="as_div_carte">
+        <h2>Parcourez le Monde pour en voir d'autre</h2>
+        <div id="windy"></div>
+        <div class="container">
+    </div>
+
+    </div>
+</div>
+
 {#    {{ dump(collection) }}#}
 {#    <h1>{{ object.department }}</h1>#}
 {#    <ul>#}
