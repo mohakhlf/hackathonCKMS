@@ -69,13 +69,13 @@ class HomeController extends AbstractController
             $content2 = $object2->toArray();
             $content3 = $object3->toArray();
             $content4 = $object4->toArray();
-            var_dump($content1);
-            var_dump($content2);
-            var_dump($content3);
-            var_dump($content4);
-            var_dump($content["objectIDs"]);
+//            var_dump($content1);
+//            var_dump($content2);
+//            var_dump($content3);
+//            var_dump($content4);
+//            var_dump($content["objectIDs"]);
         }
-        return $this->twig->render('Home/index.html.twig', ["webcams" => $content["result"]["webcams"], "content" => $content, "collection1"=>$content1, "collection2"=>$content2, "collection3"=>$content3, "collection4"=>$content4]);
+        return $this->twig->render('Home/index.html.twig', ["content" => $content, "collection1"=>$content1, "collection2"=>$content2, "collection3"=>$content3, "collection4"=>$content4]);
     }
 }
 
