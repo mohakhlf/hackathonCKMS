@@ -54,10 +54,10 @@ class HomeController extends AbstractController
     {
         $client = HttpClient::create();
         $response = $client->request("GET", "https://collectionapi.metmuseum.org/public/collection/v1/search?medium=Paintings&hasImages=true&q=sunset");
-        $object1 = $client->request("GET", "https://collectionapi.metmuseum.org/public/collection/v1/objects/437980");
-        $object2 = $client->request("GET", "https://collectionapi.metmuseum.org/public/collection/v1/objects/437980");
-        $object3 = $client->request("GET", "https://collectionapi.metmuseum.org/public/collection/v1/objects/437980");
-        $object4 = $client->request("GET", "https://collectionapi.metmuseum.org/public/collection/v1/objects/437980");
+        $object1 = $client->request("GET", "https://collectionapi.metmuseum.org/public/collection/v1/objects/436631");
+        $object2 = $client->request("GET", "https://collectionapi.metmuseum.org/public/collection/v1/objects/73159");
+        $object3 = $client->request("GET", "https://collectionapi.metmuseum.org/public/collection/v1/objects/49173");
+        $object4 = $client->request("GET", "https://collectionapi.metmuseum.org/public/collection/v1/objects/436062");
 
         $statusCode = $response->getStatusCode(); // get Response status code 200
         if ($statusCode === 200) {
