@@ -1,7 +1,21 @@
 {% extends 'layout.html.twig' %}
 {% block content %}
-<h1>Hello Produit</h1>
+    <div class="container-fluid">
+    <div class="card text-center">
+        <img src="{{ produit.image }}" width="250" height="450" alt="">
+        <div class="card-body">
+            <h5 class="card-title">Titre de l'Oeuvre: {{ produit.title }}</h5>
+        </div>
+    </div>
+    </div>
+
+{#    #}
+{#    <div class="container">#}
+{#        <div class="col">#}
+{#    <h1 class="title">Description de l'Oeuvre</h1>#}
 {#<a href="/produit/55555"></a>#}
-{{ produit.title }}
-<img src="{{ produit.image }}" width="250" height="450" alt="">
+{#{{ produit.title }}#}
+{#<img src="{{ produit.image }}" width="250" height="450" alt="">#}
+{#        </div>#}
+{#    </div>#}
 {% endblock %}
